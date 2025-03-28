@@ -48,7 +48,7 @@ require (
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/go-stack/stack v1.8.1
 	github.com/gobwas/glob v0.2.3
-	github.com/gofrs/uuid v4.3.0+incompatible
+	github.com/gofrs/uuid v4.3.0+incompatible // indirect
 	github.com/gogo/protobuf v1.3.2
 	github.com/golang/mock v1.6.0
 	github.com/golang/snappy v0.0.4
@@ -256,7 +256,6 @@ require (
 	github.com/grafana/codejen v0.0.2
 	github.com/grafana/dskit v0.0.0-20211011144203-3a88ec0b675f
 	github.com/jmoiron/sqlx v1.3.5
-	github.com/kr/pretty v0.3.0
 	github.com/matryer/is v1.4.0
 	github.com/parca-dev/parca v0.12.1
 	github.com/urfave/cli v1.22.9
@@ -293,7 +292,6 @@ require (
 	github.com/mattn/go-ieproxy v0.0.3 // indirect
 	github.com/mitchellh/mapstructure v1.4.3 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
-	github.com/rogpeppe/go-internal v1.8.1 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/segmentio/asm v1.1.4 // indirect
 	go.starlark.net v0.0.0-20221020143700-22309ac47eac // indirect

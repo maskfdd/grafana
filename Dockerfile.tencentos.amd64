@@ -27,10 +27,10 @@ WORKDIR /grafana
 COPY . /grafana
 
 RUN go mod verify
-RUN make build-go
+RUN go run build.go build
 
 # Final stage
-FROM mirrors.tencent.com/tencentos/tencentos4-minimal:4.2-v20240611
+FROM registry.jiguang.woa.com/tencentos/tencentos3.3-minimal:3.3-v20241226
 
 LABEL maintainer="Grafana team <hello@grafana.com>"
 
