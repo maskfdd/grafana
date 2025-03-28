@@ -1,4 +1,4 @@
-FROM node:16 as js-builder
+FROM node:16.20.2-alpine3.18 as js-builder
 
 ENV NODE_OPTIONS=--max_old_space_size=8000
 
@@ -9,7 +9,7 @@ COPY .yarn .yarn
 COPY packages packages
 COPY plugins-bundled plugins-bundled
 
-RUN yarn install --immutable
+RUN yarn install
 
 COPY tsconfig.json .eslintrc .editorconfig .browserslistrc .prettierrc.js babel.config.json .linguirc ./
 COPY public public
@@ -46,9 +46,6 @@ ENV PATH="/usr/share/grafana/bin:$PATH" \
   GF_PATHS_PROVISIONING="/etc/grafana/provisioning"
 
 WORKDIR $GF_PATHS_HOME
-
-RUN yum install -y ca-certificates bash tzdata curl && \
-    yum clean all
 
 COPY conf ./conf
 

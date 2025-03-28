@@ -47,9 +47,6 @@ ENV PATH="/usr/share/grafana/bin:$PATH" \
 
 WORKDIR $GF_PATHS_HOME
 
-RUN yum install -y ca-certificates bash tzdata curl && \
-    yum clean all
-
 COPY conf ./conf
 
 RUN if [ ! $(getent group "$GF_GID") ]; then \
