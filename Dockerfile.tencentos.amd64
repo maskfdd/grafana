@@ -1,5 +1,5 @@
-FROM registry.jiguang.woa.com/tencentos/tencentos3.3-minimal:3.3-v20241226
-RUN yum install -y https://dl.grafana.com/oss/release/grafana-10.3.4-1.x86_64.rpm
+FROM registry.jiguang.woa.com/tencentos/tencentos3.3-minimal:latest
+RUN yum install -y https://dl.grafana.com/oss/release/grafana-10.3.4-1.x86_64.rpm && yum clean all
 
 ARG GF_UID="472"
 ARG GF_GID="0"
